@@ -15,7 +15,7 @@ This is a modern portfolio web application built with React, TypeScript, Tailwin
 - TypeScript
 - Tailwind CSS
 - Vite
-- Lucide Icons
+- Lucide Iconsdr3edrdfr
 
 ## Getting Started
 1. **Install dependencies:**

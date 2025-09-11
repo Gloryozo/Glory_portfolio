@@ -17,20 +17,13 @@ import {
   Star,
   CheckCircle,
   ChevronDown,
-  Video,
-  BookOpen,
-  Clock,
-  TrendingUp,
   Users,
-  FileText,
-  Moon,
-  Sun
-} from 'lucide-react';
+ } from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState(null);
+  const [currentVideo, setCurrentVideo] = useState<number | null>(null);
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
 
   const projects = [

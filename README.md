@@ -1,4 +1,4 @@
-# Cloudflare React Boilerplate Portfolio
+# Glory Ozoji's portfolio
 
 This is a modern portfolio web application built with React, TypeScript, Tailwind CSS, and Vite. It showcases projects, skills, experience, and contact information in a visually appealing dark-themed layout.
 
@@ -15,7 +15,7 @@ This is a modern portfolio web application built with React, TypeScript, Tailwin
 - TypeScript
 - Tailwind CSS
 - Vite
-- Lucide Iconsdr3edrdfr
+- Lucide Icons
 
 ## Getting Started
 1. **Install dependencies:**

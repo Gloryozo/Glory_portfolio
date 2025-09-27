@@ -39,6 +39,19 @@ function App() {
   const projects = [
     {
       id: 1,
+      title: "Industrial Image Database & Integration",
+      description: "End-to-end solution for integrating images captured by Beckhoff PLC with React frontend and Odoo ERP system for enhanced production monitoring.",
+      technologies: ["Odoo ERP", "React.js", "Node.js", "PostgreSQL", "MinIO", "Beckhoff PLC"],
+      github: "#",
+      video: "https://placehold.co/800x450/059669/ffffff?text=Industrial+Image+DB+Demo",
+      image: "https://placehold.co/400x250/059669/ffffff?text=Industrial+Image+DB",
+      type: "Internship Project",
+      status: "Completed",
+      demo: "#",
+      mediaType: "video"
+    },
+    {
+      id: 2,
       title: "Junction Sentinel",
       description: "A multi-agent cybersecurity platform designed to secure drone intelligence data with Privacy-by-Design principles.",
       technologies: ["Next.js", "React", "Node.js", "Express", "MongoDB", "Google Gemini", "Material UI"],
@@ -50,17 +63,16 @@ function App() {
       demo: "https://junctionsentinel.com/",
       mediaType: "video"
     },
-    {
-      id: 2,
-      title: "Industrial Image Database & Integration",
-      description: "End-to-end solution for integrating images captured by Beckhoff PLC with React frontend and Odoo ERP system for enhanced production monitoring.",
-      technologies: ["Odoo ERP", "React.js", "Node.js", "PostgreSQL", "MinIO", "Beckhoff PLC"],
-      github: "#",
-      video: "https://placehold.co/800x450/059669/ffffff?text=Industrial+Image+DB+Demo",
-      image: "https://placehold.co/400x250/059669/ffffff?text=Industrial+Image+DB",
-      type: "Internship Project",
-      status: "Completed",
-      demo: "#",
+     {
+      id: 5,
+      title: "Movie App Database",
+      description: "A movie database application that enables users to search for and view details about movies and theatre schedules.",
+      technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "TMDB API"],
+      github: "https://github.com/Group-16-Movie-App/CineCat_movie_app",
+      video: "https://youtu.be/ozmxfkc1DaE",
+      image: "images/movie-screenshot.png",
+      type: "Web App",
+      status: "Live",
       mediaType: "video"
     },
     {
@@ -84,30 +96,6 @@ function App() {
       type: "Mobile App",
       status: "Completed",
       mediaType: "images"
-    },
-    {
-      id: 4,
-      title: "Quizzify Interactive Quiz Application",
-      description: "An interactive quiz application that allows users to test their knowledge on various topics.",
-      technologies: ["React.js", "PostgreSQL", "Bootstrap", "JavaScript"],
-      github: "https://github.com/Gloryozo/Quizzify",
-      video: "https://youtu.be/ozmxfkc1DaE",
-      image: "https://placehold.co/400x250/f093fb/ffffff?text=Quizzify+Screenshot",
-      type: "Web App",
-      status: "Live",
-      mediaType: "video"
-    },
-    {
-      id: 5,
-      title: "Movie App Database",
-      description: "A movie database application that enables users to search for and view details about movies and theatre schedules.",
-      technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "TMDB API"],
-      github: "https://github.com/Group-16-Movie-App/CineCat_movie_app",
-      video: "https://youtu.be/ozmxfkc1DaE",
-      image: "images/movie-screenshot.png",
-      type: "Web App",
-      status: "Live",
-      mediaType: "video"
     }
   ];
 
@@ -1051,59 +1039,7 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Academic Experience */}
-            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Academic Projects</h3>
-                  <p className="text-indigo-400 font-semibold">Oulu University of Applied Sciences</p>
-                </div>
-                <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium">
-                    2023 - Present
-                  </span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <p className="text-gray-300">
-                  Hands-on experience building real-world applications during academic studies.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Key Projects:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Built movie app with React.js, Node.js, Express.js, PostgreSQL</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Developed serverless web app using AWS services</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Created mobile apps using Kotlin and Android Studio</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Technical Skills:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Created and maintained RESTful APIs</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Automated system updates with shell scripting</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div>  
           </div>
           <div className="text-center mt-16">
             <a

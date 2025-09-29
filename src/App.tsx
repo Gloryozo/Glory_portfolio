@@ -352,15 +352,16 @@ function App() {
                   <h1 className="text-4xl md:text-5xl font-bold text-gray-100">
                     Glory Ifeoma Ozoji
                   </h1>
-                  <p className="text-xl text-indigo-400 font-semibold">Full Stack Developer & AI Security Specialist</p>
+                  <p className="text-xl text-indigo-400 font-semibold">Full Stack Developer & Software Test Engineer</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Experienced Software Engineer with proficiency in designing robust software with enjoyable user experience. Proven track record in developing and optimizing performance of full stack applications using JavaScript, Python, Java and Cloud-based architectures.
+                 Experienced Software Engineer with proven expertise in designing, developing, and optimizing Odoo ERP custom modules and full-stack applications. Demonstrated ability to integrate external PostgreSQL databases and MinIO object storage, refactor legacy codebases, and build robust RESTful APIs for seamless data exchange, with a strong understanding of Agile methodologies. Experienced in big data analysis utilizing R and MS Excel to derive insights and support data-driven decision-making.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Winner of the Ubicomp - ITEE Hackathon for creating Junction Sentinel, a multi-agent cybersecurity platform for drone intelligence data with Privacy-by-Design principles.
+                 Bright and joyful personality, team spirited, with excellent emotional intelligence and communication skills. 
+                  A critical thinker, fast learner with strong interest in acquiring new knowledge.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
@@ -383,25 +384,11 @@ function App() {
                   <span>View Projects</span>
                 </a>
               </div>
-              <div className="flex flex-wrap gap-3 pt-4">
-                <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
-                  React.js
-                </span>
-                <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
-                  Node.js
-                </span>
-                <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
-                  AI Security
-                </span>
-                <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
-                  Industrial Systems
-                </span>
-              </div>
             </div>
             <div className="relative">
               <div className="bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-700 p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <img 
-                  src="images/glorypix.jpg" 
+                  src="images/Glory-Prof-pix2.jpg" 
                   alt="Glory Ozoji" 
                   className="w-full h-auto rounded-2xl shadow-lg"
                 />
@@ -414,6 +401,251 @@ function App() {
                 <Star className="w-8 h-8 text-white" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+       {/* Experience Section */}
+      <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Professional Experience</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto rounded-full"></div>
+          </div>
+          <div className="space-y-12">
+            {/* Industrial Project Experience */}
+            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-100">Industrial Image Database & Integration</h3>
+                  <p className="text-indigo-400 font-semibold">Oulu University of Applied Sciences & OSAO (EU Funded Project)</p>
+                </div>
+                <div className="mt-4 lg:mt-0">
+                  <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
+                    May 6 - Sept 15, 2025
+                  </span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <p className="text-gray-300">
+                  Developed an end-to-end solution for integrating images captured by Beckhoff PLC with React frontend and Odoo ERP system for enhanced production monitoring and traceability.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 pt-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Key Responsibilities:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <Image className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Automated image fetching from Beckhoff PLC to MinIO storage</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Database className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Designed PostgreSQL schema for image metadata management</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Server className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Developed Node.js middleware with REST API endpoints</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Code className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Built React frontend for real-time image visualization</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Technical Implementation:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <HardDrive className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Implemented MinIO S3 object storage for centralized image management</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ExternalLink className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Integrated with Odoo ERP via custom "Warehouse Image Gallery" module</span>
+                      </li>
+                      <li className="flex items-start">
+                        <FileText className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Created comprehensive API documentation and system architecture</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Zap className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Optimized system for real-time image processing and display</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Hackathon Experience */}
+            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-100">Hackathon Winner - Junction Sentinel</h3>
+                  <p className="text-yellow-400 font-semibold">Ubicomp - ITEE JunctionX Hackathon</p>
+                </div>
+                <div className="mt-4 lg:mt-0">
+                  <span className="px-4 py-2 bg-yellow-900 text-yellow-400 rounded-full text-sm font-medium">
+                    Sept 19-21, 2025
+                  </span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <p className="text-gray-300">
+                  Developed a multi-agent cybersecurity platform designed to secure drone intelligence data with Privacy-by-Design principles.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 pt-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Key Features:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <Shield className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Privacy-by-Design with GDPR/NATO guardrails</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Zap className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Dynamic Prompt Injection for personalized privacy</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Lock className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Differential Privacy & Full Auditability</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Technical Implementation:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <Brain className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Smart Query Processor with intent classification</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Database className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Data Handler with MongoDB & Google Gemini API</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Code className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Next.js, React, Node.js, Express, MongoDB</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Current Position */}
+            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-100">Full Stack Developer</h3>
+                  <p className="text-indigo-400 font-semibold">Microgate Computers Limited</p>
+                </div>
+                <div className="mt-4 lg:mt-0">
+                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium">
+                    2022 - Present
+                  </span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <p className="text-gray-300">
+                  Perform end-to-end development of scalable and high-performance web applications using React.js, Node.js, and Express.js.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 pt-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Key Responsibilities:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Design and implement RESTful APIs for user authentication and data retrieval</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Establish comprehensive test coverage using Jest and React Testing Library</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Utilize GitHub Actions to manage CI/CD workflows</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Achievements:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Managed tasks efficiently using Kanban boards</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Collaborated effectively with cross-functional teams</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Previous Position */}
+            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-100">Software Test Engineer</h3>
+                  <p className="text-indigo-400 font-semibold">Microgate Computers Limited</p>
+                </div>
+                <div className="mt-4 lg:mt-0">
+                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium">
+                    2018 - 2022
+                  </span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <p className="text-gray-300">
+                  Performed 60+ manual and automated tests for new products, enhancing efficiency and quality.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 pt-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Testing Expertise:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Automated testing with Robot Framework, Selenium, Cypress, Appium</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Enhanced efficiency of 50+ test cases through optimization</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>RESTful API testing using Postman</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-100 mb-2">Additional Skills:</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Debugged 120+ lines of Python and JavaScript code</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
+                        <span>Created test reports using Microsoft Office and Confluence</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div className="text-center mt-16">
+            <a
+              href="mailto:gloryozoji@gmail.com"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white font-bold text-lg rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              <span>Let's Work Together</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+            <p className="mt-4 text-gray-400">Available for internships and full-time opportunities</p>
           </div>
         </div>
       </section>
@@ -805,251 +1037,6 @@ function App() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Professional Experience</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto rounded-full"></div>
-          </div>
-          <div className="space-y-12">
-            {/* Industrial Project Experience */}
-            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Industrial Image Database & Integration</h3>
-                  <p className="text-indigo-400 font-semibold">Oulu University of Applied Sciences & OSAO (EU Funded Project)</p>
-                </div>
-                <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
-                    May 6 - Sept 15, 2025
-                  </span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <p className="text-gray-300">
-                  Developed an end-to-end solution for integrating images captured by Beckhoff PLC with React frontend and Odoo ERP system for enhanced production monitoring and traceability.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Key Responsibilities:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <Image className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Automated image fetching from Beckhoff PLC to MinIO storage</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Database className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Designed PostgreSQL schema for image metadata management</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Server className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Developed Node.js middleware with REST API endpoints</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Code className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Built React frontend for real-time image visualization</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Technical Implementation:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <HardDrive className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Implemented MinIO S3 object storage for centralized image management</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ExternalLink className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Integrated with Odoo ERP via custom "Warehouse Image Gallery" module</span>
-                      </li>
-                      <li className="flex items-start">
-                        <FileText className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Created comprehensive API documentation and system architecture</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Zap className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Optimized system for real-time image processing and display</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Hackathon Experience */}
-            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Hackathon Winner - Junction Sentinel</h3>
-                  <p className="text-yellow-400 font-semibold">Ubicomp - ITEE JunctionX Hackathon</p>
-                </div>
-                <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-yellow-900 text-yellow-400 rounded-full text-sm font-medium">
-                    Sept 19-21, 2025
-                  </span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <p className="text-gray-300">
-                  Developed a multi-agent cybersecurity platform designed to secure drone intelligence data with Privacy-by-Design principles.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Key Features:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <Shield className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Privacy-by-Design with GDPR/NATO guardrails</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Zap className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Dynamic Prompt Injection for personalized privacy</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Lock className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Differential Privacy & Full Auditability</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Technical Implementation:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <Brain className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Smart Query Processor with intent classification</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Database className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Data Handler with MongoDB & Google Gemini API</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Code className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Next.js, React, Node.js, Express, MongoDB</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Current Position */}
-            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Full Stack Developer</h3>
-                  <p className="text-indigo-400 font-semibold">Microgate Computers Limited</p>
-                </div>
-                <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium">
-                    2022 - Present
-                  </span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <p className="text-gray-300">
-                  Perform end-to-end development of scalable and high-performance web applications using React.js, Node.js, and Express.js.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Key Responsibilities:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Design and implement RESTful APIs for user authentication and data retrieval</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Establish comprehensive test coverage using Jest and React Testing Library</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Utilize GitHub Actions to manage CI/CD workflows</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Achievements:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Managed tasks efficiently using Kanban boards</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Collaborated effectively with cross-functional teams</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Previous Position */}
-            <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Software Test Engineer</h3>
-                  <p className="text-indigo-400 font-semibold">Microgate Computers Limited</p>
-                </div>
-                <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium">
-                    2018 - 2022
-                  </span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <p className="text-gray-300">
-                  Performed 60+ manual and automated tests for new products, enhancing efficiency and quality.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Testing Expertise:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Automated testing with Robot Framework, Selenium, Cypress, Appium</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Enhanced efficiency of 50+ test cases through optimization</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>RESTful API testing using Postman</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-100 mb-2">Additional Skills:</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start">
-                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Debugged 120+ lines of Python and JavaScript code</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Star className="w-4 h-4 text-yellow-500 mt-1 mr-2 flex-shrink-0" />
-                        <span>Created test reports using Microsoft Office and Confluence</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>  
-          </div>
-          <div className="text-center mt-16">
-            <a
-              href="mailto:gloryozoji@gmail.com"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white font-bold text-lg rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              <span>Let's Work Together</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <p className="mt-4 text-gray-400">Available for internships and full-time opportunities</p>
           </div>
         </div>
       </section>

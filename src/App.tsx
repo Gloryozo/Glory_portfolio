@@ -43,8 +43,8 @@ function App() {
       description: "End-to-end solution for integrating images captured by Beckhoff PLC with React frontend and Odoo ERP system for enhanced production monitoring.",
       technologies: ["Odoo ERP", "React.js", "Node.js", "PostgreSQL", "MinIO", "Beckhoff PLC"],
       github: "#",
-      video: "https://placehold.co/800x450/059669/ffffff?text=Industrial+Image+DB+Demo",
-      image: "https://placehold.co/400x250/059669/ffffff?text=Industrial+Image+DB",
+      video: "https://youtu.be/BKgRlllOpkk",
+      image: "/images/odoo_gallery.png",
       type: "Internship Project",
       status: "Completed",
       demo: "#",
@@ -107,12 +107,12 @@ function App() {
     },
     {
       category: "Frontend Frameworks",
-      items: ["React.js", "Next.js", "Bootstrap", "Tailwind CSS", "Material UI"],
+      items: ["React.js", "Next.js", "Bootstrap", "Tailwind CSS", "Material UI", "Odoo ERP"],
       icon: Code
     },
     {
       category: "Backend Technologies",
-      items: ["Node.js", "Express.js", "REST API", "GraphQL"],
+      items: ["Node.js", "Express.js", "REST API", "Python"],
       icon: Database
     },
     {
@@ -127,7 +127,7 @@ function App() {
     },
     {
       category: "API Integration",
-      items: ["REST API", "GraphQL", "TMDB API", "OpenWeather API"],
+      items: ["REST API", "GraphQL", "TMDB API", "OpenWeather API", "Gemini API"],
       icon: ExternalLink
     },
     {
@@ -137,7 +137,7 @@ function App() {
     },
     {
       category: "Cloud & DevOps",
-      items: ["Microsoft Azure", "AWS EC2/S3/Lambda", "Azure Functions", "Docker", "GitHub Actions", "CI/CD"],
+      items: ["Microsoft Azure", "AWS", "Azure Functions", "GitHub Actions", "CI/CD"],
       icon: Cloud
     },
     {
@@ -147,7 +147,7 @@ function App() {
     },
     {
       category: "Development Tools",
-      items: ["VS Code", "Android Studio", "Git", "GitHub", "npm", "yarn"],
+      items: ["VS Code", "Android Studio", "Git", "GitHub", "npm"],
       icon: TestTube
     },
     {

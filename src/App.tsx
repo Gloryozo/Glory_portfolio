@@ -32,9 +32,9 @@ import {
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState(null);
+  const [currentVideo, setCurrentVideo] = useState<number | null>(null);
   const [currentImageGallery, setCurrentImageGallery] = useState<number | null>(null);
-  const videoRefs = useRef({});
+  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
 
   const projects = [
     {
@@ -157,29 +157,28 @@ function App() {
     }
   ];
 
-  const toggleVideo = (videoId) => {
+  const toggleVideo = (videoId: number) => {
     if (currentVideo === videoId) {
       setIsPlaying(!isPlaying);
-      if (videoRefs.current[videoId]) {
+      const currentRef = videoRefs.current[videoId];
+      if (currentRef) {
         if (isPlaying) {
-          videoRefs.current[videoId].pause();
+          currentRef.pause();
         } else {
-          videoRefs.current[videoId].play();
+          currentRef.play();
         }
       }
     } else {
-      if (currentVideo && videoRefs.current[currentVideo]) {
-        videoRefs.current[currentVideo].pause();
+      if (currentVideo !== null && videoRefs.current[currentVideo]) {
+        videoRefs.current[currentVideo]?.pause();
       }
       setCurrentVideo(videoId);
       setIsPlaying(true);
-      if (videoRefs.current[videoId]) {
-        videoRefs.current[videoId].play();
-      }
+      videoRefs.current[videoId]?.play();
     }
   };
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
@@ -187,13 +186,13 @@ function App() {
     }
   };
 
-  const openImageGallery = (projectId) => {
+  const openImageGallery = (projectId: number) => {
     setCurrentImageGallery(projectId);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+      const sections = ['home', 'experience', 'skills', 'projects', 'about', 'contact'];
       const scrollPosition = window.scrollY + 100;
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -313,7 +312,7 @@ function App() {
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'skills', 'projects', 'experience', 'contact'].map((section) => (
+              {['home', 'experience', 'skills', 'projects', 'about', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -417,23 +416,27 @@ function App() {
             <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Industrial Image Database & Integration</h3>
-                  <p className="text-indigo-400 font-semibold">Oulu University of Applied Sciences & OSAO (EU Funded Project)</p>
+                  <h3 className="text-2xl font-bold text-gray-100">Backend and Odoo Developer (Internship, European Regional Development Fund (ERDF))</h3>
+                  <p className="text-indigo-400 font-semibold">Oulu University of Applied Sciences & OSAO </p>
                 </div>
                 <div className="mt-4 lg:mt-0">
                   <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
-                    May 6 - Sept 15, 2025
+                    May - September, 2025
                   </span>
                 </div>
               </div>
               <div className="space-y-4">
                 <p className="text-gray-300">
-                  Developed an end-to-end solution for integrating images captured by Beckhoff PLC with React frontend and Odoo ERP system for enhanced production monitoring and traceability.
+                  Developed novel end-to-end solution for integrating images captured by Beckhoff PLC with OdooERP system and React frontend for enhanced production monitoring and traceability.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 pt-4">
                   <div>
                     <h4 className="font-semibold text-gray-100 mb-2">Key Responsibilities:</h4>
                     <ul className="space-y-2 text-gray-400">
+                      <li className="flex items-start">
+                        <Image className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Developed and developed custom Odoo modules, integrating external PostgreSQL databases and MinIO object storage for ERP image management</span>
+                      </li>
                       <li className="flex items-start">
                         <Image className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
                         <span>Automated image fetching from Beckhoff PLC to MinIO storage</span>
@@ -444,11 +447,11 @@ function App() {
                       </li>
                       <li className="flex items-start">
                         <Server className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Developed Node.js middleware with REST API endpoints</span>
+                        <span>Designed and implemented RESTful APIs for secure image metadata exchange between Odoo and external services</span>
                       </li>
                       <li className="flex items-start">
-                        <Code className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Built React frontend for real-time image visualization</span>
+                        <Image className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Built responsive, user-friendly UIs with Owl JS, XML, and CSS, for real-time image visualization</span>
                       </li>
                     </ul>
                   </div>
@@ -481,12 +484,12 @@ function App() {
             <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Hackathon Winner - Junction Sentinel</h3>
-                  <p className="text-yellow-400 font-semibold">Ubicomp - ITEE JunctionX Hackathon</p>
+                  <h3 className="text-2xl font-bold text-gray-100">Backend Developer</h3>
+                  <p className="text-indigo-400 font-semibold">JunctionX Hackathon</p>
                 </div>
                 <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-yellow-900 text-yellow-400 rounded-full text-sm font-medium">
-                    Sept 19-21, 2025
+                  <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
+                    Sept 19 - 21, 2025
                   </span>
                 </div>
               </div>
@@ -499,8 +502,12 @@ function App() {
                     <h4 className="font-semibold text-gray-100 mb-2">Key Features:</h4>
                     <ul className="space-y-2 text-gray-400">
                       <li className="flex items-start">
+                        <Code className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
+                        <span>Designed and implemented a privacy-by-design agentic AI system that enforces data protection </span>
+                      </li>
+                      <li className="flex items-start">
                         <Shield className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Privacy-by-Design with GDPR/NATO guardrails</span>
+                        <span>Achieved granular, real-time enforcement of data governance by dynamically injecting user preferences into LLM prompts</span>
                       </li>
                       <li className="flex items-start">
                         <Zap className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
@@ -525,7 +532,7 @@ function App() {
                       </li>
                       <li className="flex items-start">
                         <Code className="w-4 h-4 text-indigo-400 mt-1 mr-2 flex-shrink-0" />
-                        <span>Next.js, React, Node.js, Express, MongoDB</span>
+                        <span>Enabled auditability by maintaining comprehensive logs of data access</span>
                       </li>
                     </ul>
                   </div>
@@ -541,7 +548,7 @@ function App() {
                   <p className="text-indigo-400 font-semibold">Microgate Computers Limited</p>
                 </div>
                 <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium">
+                  <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
                     2022 - Present
                   </span>
                 </div>
@@ -593,7 +600,7 @@ function App() {
                   <p className="text-indigo-400 font-semibold">Microgate Computers Limited</p>
                 </div>
                 <div className="mt-4 lg:mt-0">
-                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium">
+                  <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
                     2018 - 2022
                   </span>
                 </div>
@@ -637,102 +644,11 @@ function App() {
               </div>
             </div>  
           </div>
-          <div className="text-center mt-16">
-            <a
-              href="mailto:gloryozoji@gmail.com"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white font-bold text-lg rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              <span>Let's Work Together</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <p className="mt-4 text-gray-400">Available for internships and full-time opportunities</p>
-          </div>
+          
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/80">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">About Me</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto rounded-full"></div>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-100 mb-4">Education</h3>
-                <div className="space-y-4">
-                  <div className="border-l-4 border-indigo-600 pl-4">
-                    <h4 className="font-semibold text-lg">Bachelor of Engineering, Information Technology</h4>
-                    <p className="text-gray-400">Oulu University of Applied Sciences (2023 - Present)</p>
-                  </div>
-                  <div className="border-l-4 border-indigo-600 pl-4">
-                    <h4 className="font-semibold text-lg">Master of Science</h4>
-                    <p className="text-gray-400">University of Jos, Nigeria (2022)</p>
-                  </div>
-                  <div className="border-l-4 border-indigo-600 pl-4">
-                    <h4 className="font-semibold text-lg">Bachelor of Science</h4>
-                    <p className="text-gray-400">University of Jos, Nigeria (CPGA 4.09/5) (2017)</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-100 mb-4">Awards</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Award className="w-5 h-5 text-yellow-500" />
-                    <span className="text-gray-300">Winner, Ubicomp - ITEE JunctionXHackathon (September 2025)</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-300">Google Cloud Platform(GCP), Google Africa Developer Scholarship (2022)</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-300">University of Jos Masters’ scholarship (2021)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-100 mb-4">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-indigo-400" />
-                    <span className="text-gray-300">gloryozoji@gmail.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <PhoneIcon />
-                    <span className="text-gray-300">(+358) 466367755</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <LocationIcon />
-                    <span className="text-gray-300">Mylloja, Oulu, Finland</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Linkedin className="w-5 h-5 text-indigo-400" />
-                    <a href="https://www.linkedin.com/in/glory-ozoji-a143b1114/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-indigo-400 transition-colors">
-                      linkedin.com/in/gloryozoji
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-100 mb-4">Languages</h3>
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
-                    English
-                  </span>
-                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
-                    Finnish
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
@@ -993,11 +909,11 @@ function App() {
                 </div>
                 <div className="relative">
                   <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-700">
-                    <div className="relative overflow-hidden rounded-xl">
+                    <div className="relative overflow-hidden rounded-xl aspect-video bg-black">
                       <img 
                         src={project.image} 
                         alt={project.title} 
-                        className="w-full h-auto rounded-lg"
+                        className="w-full h-full object-contain rounded-lg"
                       />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                         {project.mediaType === "images" ? (
@@ -1041,14 +957,85 @@ function App() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/80">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">About Me</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto rounded-full"></div>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-100 mb-4">Education</h3>
+                <div className="space-y-4">
+                  <div className="border-l-4 border-indigo-600 pl-4">
+                    <h4 className="font-semibold text-lg">Bachelor of Engineering, Information Technology</h4>
+                    <p className="text-gray-400">Oulu University of Applied Sciences (2023 - Present)</p>
+                  </div>
+                  <div className="border-l-4 border-indigo-600 pl-4">
+                    <h4 className="font-semibold text-lg">Master of Science</h4>
+                    <p className="text-gray-400">University of Jos, Nigeria (2022)</p>
+                  </div>
+                  <div className="border-l-4 border-indigo-600 pl-4">
+                    <h4 className="font-semibold text-lg">Bachelor of Science</h4>
+                    <p className="text-gray-400">University of Jos, Nigeria (CPGA 4.09/5) (2017)</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-100 mb-4">Languages</h3>
+                <div className="flex flex-wrap gap-3">
+                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
+                    English
+                  </span>
+                  <span className="px-4 py-2 bg-gray-800 text-indigo-400 rounded-full text-sm font-medium border border-gray-700">
+                    Finnish
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-100 mb-4">Awards</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <Award className="w-5 h-5 text-yellow-500" />
+                    <span className="text-gray-300">Winner, Ubicomp - ITEE JunctionXHackathon (Sept, 2025)</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <span className="text-gray-300">Google Cloud Platform(GCP), Google Africa Developer Scholarship (2022)</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <span className="text-gray-300">University of Jos Masters’ scholarship (2021)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-indigo-400 mb-4">
               Get in Touch
             </h2>
-            <p className="mt-4 text-lg text-gray-300">Have a project in mind? Let's discuss how we can work together to bring your ideas to life.</p>
+            <div className="flex flex-col items-center gap-4">
+              <a
+                href="mailto:gloryozoji@gmail.com"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white font-bold text-lg rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                <span>Let's Work Together</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <p className="text-sm md:text-base text-gray-400">Available for internships and full-time opportunities</p>
+            </div>
+            <p className="mt-6 text-lg text-gray-300">Have a project in mind? Let's discuss how we can work together to bring your ideas to life.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Info */}
@@ -1278,15 +1265,6 @@ function App() {
         </div>
       )}
     </div>
-  );
-}
-
-// Helper components for icons
-function PhoneIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-400">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-    </svg>
   );
 }
 

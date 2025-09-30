@@ -416,12 +416,12 @@ function App() {
             <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-700">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-100">Backend and Odoo Developer (Internship, European Regional Development Fund (ERDF))</h3>
-                  <p className="text-indigo-400 font-semibold">Oulu University of Applied Sciences & OSAO </p>
+                  <h3 className="text-2xl font-bold text-gray-100">Backend and Odoo Developer (European Regional Development Fund (ERDF) Project)</h3>
+                  <p className="text-indigo-400 font-semibold">Oulu University of Applied Sciences</p>
                 </div>
                 <div className="mt-4 lg:mt-0">
                   <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
-                    May - September, 2025
+                     2025
                   </span>
                 </div>
               </div>
@@ -489,7 +489,7 @@ function App() {
                 </div>
                 <div className="mt-4 lg:mt-0">
                   <span className="px-4 py-2 bg-green-900 text-green-300 rounded-full text-sm font-medium">
-                    Sept 19 - 21, 2025
+                    2025
                   </span>
                 </div>
               </div>

@@ -387,7 +387,7 @@ function App() {
             <div className="relative">
               <div className="bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-700 p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <img 
-                  src="images/Glory-Prof-pix2.jpg" 
+                  src="images/profile pix Glory2.jpg" 
                   alt="Glory Ozoji" 
                   className="w-full h-auto rounded-2xl shadow-lg"
                 />

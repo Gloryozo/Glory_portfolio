@@ -26,7 +26,8 @@ import {
   Image,
   Server,
   HardDrive,
-  FileText
+  FileText,
+  Briefcase
 } from 'lucide-react';
 
 function App() {
@@ -107,8 +108,13 @@ function App() {
     },
     {
       category: "Frontend Frameworks",
-      items: ["React.js", "Next.js", "Bootstrap", "Tailwind CSS", "Material UI", "Odoo ERP"],
+      items: ["React.js", "Odoo ERP", "Next.js", "Bootstrap", "Tailwind CSS", "Material UI"],
       icon: Code
+    },
+    {
+      category: "Business Tools / ERP",
+      items: ["Odoo ERP"],
+      icon: Briefcase
     },
     {
       category: "Backend Technologies",
@@ -117,7 +123,7 @@ function App() {
     },
     {
       category: "Mobile Technologies",
-      items: ["Android", "Kotlin", "Java", "React Native", "Flutter"],
+      items: ["Android", "Kotlin", "Java", "React Native"],
       icon: Smartphone
     },
     {
@@ -127,17 +133,17 @@ function App() {
     },
     {
       category: "API Integration",
-      items: ["REST API", "GraphQL", "TMDB API", "OpenWeather API", "Gemini API"],
+      items: ["REST API", "GraphQL", "TMDB API","Finnkino API", "countries API", "Gemini API"],
       icon: ExternalLink
     },
     {
       category: "Databases & Storages",
-      items: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Firebase", "MinIO"],
+      items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "MinIO"],
       icon: Database
     },
     {
       category: "Cloud & DevOps",
-      items: ["Microsoft Azure", "AWS", "Azure Functions", "GitHub Actions", "CI/CD"],
+      items: ["Microsoft Azure", "AWS", "GitHub Actions", "CI/CD"],
       icon: Cloud
     },
     {
@@ -152,7 +158,12 @@ function App() {
     },
     {
       category: "Communication & Language Skills",
-      items: ["English", "Finnish", "Teamwork", "Presentation", "Documentation"],
+      items: ["English", "Finnish"],
+      icon: Users
+    },
+    {
+      category: "Soft Skills",
+      items: ["Critical Thinking", "Problem Solving", "Fast Learner", "Teamwork", "Adaptability", "Time Management"],
       icon: Users
     }
   ];
@@ -355,10 +366,10 @@ function App() {
                 </div>
               </div>
               <div className="space-y-4">
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-300 leading-relaxed text-justify">
                  Experienced Software Engineer with proven expertise in designing, developing, and optimizing Odoo ERP custom modules and full-stack applications. Demonstrated ability to integrate external PostgreSQL databases and MinIO object storage, refactor legacy codebases, and build robust RESTful APIs for seamless data exchange, with a strong understanding of Agile methodologies. Experienced in big data analysis utilizing R and MS Excel to derive insights and support data-driven decision-making.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-300 leading-relaxed text-justify">
                  Bright and joyful personality, team spirited, with excellent emotional intelligence and communication skills. 
                   A critical thinker, fast learner with strong interest in acquiring new knowledge.
                 </p>
@@ -755,9 +766,6 @@ function App() {
                         break;
                       case 'English':
                       case 'Finnish':
-                      case 'Teamwork':
-                      case 'Presentation':
-                      case 'Documentation':
                         IconComponent = Users;
                         break;
                       case 'Privacy-by-Design':

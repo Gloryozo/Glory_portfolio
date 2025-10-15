@@ -43,7 +43,7 @@ function App() {
       description: "End-to-end solution for integrating images captured by Beckhoff PLC with React frontend and Odoo ERP system for enhanced production monitoring.",
       technologies: ["Odoo ERP", "React.js", "Node.js", "PostgreSQL", "MinIO", "Beckhoff PLC"],
       github: "#",
-      video: "https://youtu.be/BKgRlllOpkk",
+      video: "https://www.youtube.com/watch?v=zjCXuK0YNtI",
       image: "/images/odoo_gallery.png",
       type: "Internship Project",
       status: "Completed",
